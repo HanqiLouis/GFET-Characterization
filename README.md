@@ -3,8 +3,8 @@
 This repository contains **3 interactive Google Colab notebooks** for analyzing and visualizing data:
 
 1. **`Plot_all_Runs_GUI.ipynb`** – Plot every individual provided data files of a selected site and show them all on the same plot
-2. **`averaging_gui.ipynb`** – Compute and plot an 'averaged' of every individual provided data files of a selected site
-3. **`boxplot_gui.ipynb`** – Generate boxplots for all sites
+2. **`Plot_Average_GUI.ipynb`** – Compute and plot an 'averaged' of every individual provided data files of a selected site
+3. **`DP_Boxplot_GUI.ipynb`** – Generate boxplots for all sites
 
 # ⚠️ Disclaimer
 
@@ -44,5 +44,6 @@ drive.mount('/content/drive')
 ```
 
 ### Expected file format:
-The GUIs are designed to process and compute the Dirac points of **linear voltage sweeps on the gate (with constant bias between gate and drain)** using the **Keithley**. 
+The GUIs are designed to process and compute the Dirac points of **linear voltage sweeps on the gate (with constant bias between gate and drain)** using the **Keithley**.
+
 ⚠️ Important: During the measurements, in the Keithley's parameters, the x-axis needs to be named *VG* (both letters capital) and the y-axis *ID* (also all capital).
