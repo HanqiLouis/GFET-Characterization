@@ -33,8 +33,8 @@ Make sure:
 ## 📁 Data Preparation
 
 ### Where to store files:
-- **Option 1**: Upload files directly within Colab when prompted (not recommanded for large amount of data)
-- **Option 2 (Recommanded)**: Store your files in a folder on Google Drive. Then mount your Drive and navigate to the correct folder. It can also be a shared folder if your are working with multiple collaborators
+- **Option 1**: Create a folder within the Colab environment and upload the files directly. Be careful that the files will be lost when the session is closed.
+- **Option 2 (Recommanded)**: Store your files in a folder on Google Drive. Then mount your Drive and navigate to the correct folder. It can also be a shared folder if your are working with multiple collaborators.
 
 To mount Google Drive in Colab, run the first cell of the Notebook and allow Colab to connect to your personal Drive:
 
@@ -47,3 +47,5 @@ drive.mount('/content/drive')
 The GUIs are designed to process and compute the Dirac points of **linear voltage sweeps on the gate (with constant bias between gate and drain)** using the **Keithley**.
 
 ⚠️ Important: During the measurements, in the Keithley's parameters, the x-axis needs to be named *VG* (both letters capital) and the y-axis *ID* (also all capital).
+
+The order of the files in the folder is critical. When uploaded, please ensure that they are well ordered by sites in the folder (e.g. site1_run1, site1_run2, site2_run1, site2_run2, etc.), especially if the names of files are modified when exported from the Keithley (recommended to leave the files names as default in the Keithley). Also important to verify that only files to be used for the computation are uploaded, and that the number of runs for every sites are consistent. Sites with different number of runs are very likely to produce wrong results.
