@@ -39,7 +39,7 @@ These notebooks are meant to be used on **Google Colab** – no local installati
 To run them successfully:
 
 - You must be signed in to a **Google account**  
-  ⚠️ *Note:* EPFL Google accounts may cause issues with Drive access in Colab. A personal Google account is recommended.
+  ⚠️ *Note:* EPFL accounts may cause issues with Drive access in Colab. A personal Google account is recommended.
 
 ---
 
