@@ -46,6 +46,27 @@ drive.mount('/content/drive')
 ### Expected file format:
 The GUIs are designed to process and compute the Dirac points of **linear voltage sweeps on the gate (with constant bias between gate and drain)** using the **Keithley**.
 
-⚠️ Important: During the measurements, in the Keithley's parameters, the x-axis needs to be named *VG* (both letters capital) and the y-axis *ID* (also all capital).
+### ⚠️ Important: During the measurements, in the Keithley's parameters, the x-axis needs to be named *VG* (both letters capital) and the y-axis *ID* (also all capital).
 
-The order of the files in the folder is critical. When uploaded, please ensure that they are well ordered by sites in the folder (e.g. site1_run1, site1_run2, site2_run1, site2_run2, etc.), especially if the names of files are modified when exported from the Keithley (recommended to leave the files names as default in the Keithley). Also important to verify that only files to be used for the computation are uploaded, and that the number of runs for every sites are consistent. Sites with different number of runs are very likely to produce wrong results.
+The order of the files in the folder is critical. When uploaded, please ensure that they are well ordered by sites and runs in the folder (e.g. in order: Site@1Run1, Site@1Run2, Site@2Run1, Site@2Run2, etc.), especially if the names of files are modified when exported from the Keithley (recommended to leave the files names as default in the Keithley). Also important to verify that only files to be used for the computation are uploaded, and that the number of runs for every sites are consistent. Sites with different number of runs are very likely to produce wrong results.
+
+---
+
+# 🧪 Notebook Descriptions
+
+## 1. 📈 plotting_gui.ipynb
+Purpose: Plot every single provided files, regrouped by sites.
+(images)
+Parameters:
+- Measurement Name: the name of the measurement, will be used as label in the to right corner
+- Path to Measurement Folder: please write down the path to the folder where the files are stored. You get the path to your folder by clicking the folder icon on the left tool bar in Colab. If your file are stored on your Drive, once you mounted your Drive, a folder named 'drive' should appear. Then navigate in this folder by following drive -> MyDrive, and find the folder where the files are stored. Finally, you can get the path by clicking the three little dots on the right next to your folder and 'copy path'.
+- +/-: to add a measurement folder or to remove the last added folder
+- Number of sites: the number of sites of the measured chip
+- Runs per site: the number of runs per site performed during measurement (every provided measurement folder must have the same runs per site or the resulting plots will be errornous!)
+- Site to display: allow to select which site to visualize
+- Dual sweep: If the measurements perforemed are forward+backward linear sweeps, ticking this checkbox will only show the forward sweep, while leaving it unticked will show the whole cycle
+- Save: ticking this checkbox will save the resulting plots. The path to where the files will be saved has to be provided in 'Save Directory'
+- Save Directory: The path to where the files will be saved. If the folder doesn't exist, a new one with the provided name will be created automatically. You need to tick the 'Save' checkbox if you want your files to be saved
+- Plot: initialte the plotting. You need to fill all other parameters before plotting
+- Save all plots: Save every plots for all sites directly in the folder provided in 'Save Directory'
+  
